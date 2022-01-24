@@ -31,7 +31,11 @@ class ViewController: UIViewController {
         imageView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
         imageView.center = view.center
         view.addSubview(button)
-        
+        getRandomPhoto()
+        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+    }
+    
+    @objc func didTapButton(){
         getRandomPhoto()
     }
     
